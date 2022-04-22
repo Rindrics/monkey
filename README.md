@@ -1,2 +1,3 @@
-# writing-an-interpreter-in-go
+# monkey
+
 『Go 言語でつくるインタプリタ』読書メモ
