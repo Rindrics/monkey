@@ -21,9 +21,9 @@ const (
 	SEMICOLON = ";"
 
 	LPAREN = "("
-	LPAREN = ")"
+	RPAREN = ")"
 	LBRACE = "{"
-	LBRACE = "}"
+	RBRACE = "}"
 
 	FUNCTION = "FUNCTION"
 	LET      = "LET"
