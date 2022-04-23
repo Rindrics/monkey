@@ -53,3 +53,7 @@ func (l *Lexer) NextToken() token.Token {
 	l.readChar()
 	return tok
 }
+
+func newToken(tokenType token.TokenType, ch byte) token.Token {
+	return token.Token{Type: tokenType, Literal: string(ch)}
+}
