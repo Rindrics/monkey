@@ -63,6 +63,7 @@ func (l *Lexer) NextToken() token.Token {
 	default:
 		if isLetter(l.ch) {
 			tok.Literal = l.readIdentifier()
+			tok.Type = token.LookupIdent(tok.Literal)
 		} else {
 			tok = newToken(token.ILLEGAL, l.ch)
 		}
