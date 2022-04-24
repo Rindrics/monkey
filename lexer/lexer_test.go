@@ -15,6 +15,7 @@ let add = fn(x, y) {
 };
 let result = add(five, ten);
 !-/*<>
+== !=
 `
 
 	tests := []struct {
@@ -63,6 +64,8 @@ let result = add(five, ten);
 		{token.ASTERISK, "*"},
 		{token.LT, "<"},
 		{token.GT, ">"},
+		{token.EQ, "=="},
+		{token.NOT_EQ, "!="},
 		{token.EOF, ""},
 	}
 
