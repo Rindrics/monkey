@@ -4,6 +4,9 @@ import (
 	"bufio"
 	"fmt"
 	"io"
+
+	"github.com/Rindrics/monkey/lexer"
+	"github.com/Rindrics/monkey/token"
 )
 
 func Start(in io.Reader) {
@@ -12,5 +15,10 @@ func Start(in io.Reader) {
 	if !scanned {
 		return
 	}
-	fmt.Println("from repl:", scanner.Text())
+	line := scanner.Text()
+	l := lexer.New(line)
+
+	for tok := l.NextToken(); tok.Type != token.EOF; tok = l.NextToken() {
+		fmt.Printf("%+v\n", tok)
+	}
 }
