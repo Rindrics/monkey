@@ -9,9 +9,11 @@ import (
 	"github.com/Rindrics/monkey/token"
 )
 
+const PROMPT = ">> "
+
 func Start(in io.Reader) {
 	scanner := bufio.NewScanner(in)
-
+	fmt.Printf(PROMPT)
 	for {
 		scanned := scanner.Scan()
 		if !scanned {
