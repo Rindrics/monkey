@@ -1,3 +1,3 @@
-module github.com/Rindrics/monkey
+module monkey
 
 go 1.17
